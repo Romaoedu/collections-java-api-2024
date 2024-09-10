@@ -17,9 +17,7 @@ public class OrdenacaoPessoas {
     List<Pessoa> listaPessoas = new ArrayList<>();
 
     public void adicionarPessoas(String nome, int idade, double altura) {
-
-        Pessoa pessoa = new Pessoa(nome, idade, altura);
-        listaPessoas.add(pessoa);
+        listaPessoas.add(new Pessoa(nome, idade, altura));
     }
 
     public void ordenarPorIdade(){

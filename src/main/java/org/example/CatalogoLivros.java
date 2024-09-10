@@ -15,36 +15,41 @@ public class CatalogoLivros {
     List<Livro> catalogo = new ArrayList<>();
 
     public void adicionarLivro(String titulo, String autor, int anoPublicacao) {
-        Livro livro = new Livro(titulo, autor, anoPublicacao);
-        catalogo.add(livro);
+        catalogo.add(new Livro(titulo, autor, anoPublicacao));
     }
 
     public List<Livro> pesquisaAutor(String autor) {
+        List<Livro> listaLivros = new ArrayList<>();
+        if (!catalogo.isEmpty()){
+            for (Livro livro : catalogo) {
+                if (livro.getAutor().equals(autor))
+                    listaLivros.add(livro);
+            }
 
-        List<Livro> list = new ArrayList<>();
-        for (Livro livro : catalogo) {
-            if (livro.getAutor().equals(autor))
-                list.add(livro);
         }
-        return list;
+        return listaLivros;
     }
 
     public List<Livro> pesquisarPorIntervaloAnos(int anoPublicacao) {
         List<Livro> list = new ArrayList<>();
-        for (Livro livro : catalogo) {
-            if (anoPublicacao == livro.getAnoPublicacao())
-                list.add(livro);
+        if (!catalogo.isEmpty()) {
+            for (Livro livro : catalogo) {
+                if (anoPublicacao == livro.getAnoPublicacao())
+                    list.add(livro);
+            }
         }
         return list;
     }
 
     public Livro pesquisarPorTitulo(String titulo) {
 
+        if (!catalogo.isEmpty()){
         for (Livro livro : catalogo) {
-            if (livro.getTitulo().equals(titulo)){
+            if (livro.getTitulo().equals(titulo)) {
                 System.out.println(livro);
                 break;
             }
+        }
         }
         return null;
     }

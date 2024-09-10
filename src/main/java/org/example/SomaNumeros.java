@@ -14,9 +14,8 @@ public class SomaNumeros {
 
     List<Integer>listNumber = new ArrayList<>();
 
-    public List<Integer> adicionarNumero (int numero){
+    public void adicionarNumero (int numero){
         listNumber.add(numero);
-        return listNumber;
     }
 
     public int calcularSoma(){

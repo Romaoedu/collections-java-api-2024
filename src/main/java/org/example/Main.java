@@ -39,7 +39,7 @@ list.obeterDescricaoTarefas();
         catalogoLivros.adicionarLivro("O restaurante no fim do universo", "Douglas Adams", 1980);
         catalogoLivros.adicionarLivro(" universo", "Douglas Adams", 1980);
         catalogoLivros.adicionarLivro(" universo", "Douglas Adams", 1980);
-        catalogoLivros.pesquisarPorTitulo(" universo");
+        System.out.println(catalogoLivros.pesquisaAutor("Douglas Adams"));
     }
 
 }

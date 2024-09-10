@@ -8,8 +8,7 @@ public class CarrinhoDeCompras {
     List<Item>itens = new ArrayList<>();
 
     public void adicionarItem(String nome, double preco, int quantidade){
-        Item item = new Item(nome, preco, quantidade);
-        itens.add(item);
+        itens.add(new Item(nome, preco, quantidade));
     }
 
     public void removeItem(String nome){

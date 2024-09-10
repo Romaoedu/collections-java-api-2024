@@ -20,7 +20,6 @@ public class ListaTarefas {
    }
 
    public void adicionarTarefa(String descricao){
-
        toDo.add(new Tarefa(descricao));
    }
 
