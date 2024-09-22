@@ -23,16 +23,22 @@ public class CarrinhoDeCompras {
     }
 
     public double calcularValorCarrinho(){
-        double soma = 0;
+        double soma = 0d;
         for (Item i : itens){
-            soma = soma + i.getPreco();
+            soma = soma + i.getPreco() * i.getQuantidade();
         }
         return soma;
     }
 
     public void exibirItens(){
 
-        System.out.println(itens.toString());
+        itens.stream().forEach(System.out::println);
 
+    }
+
+    public static void main(String[] args) {
+        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+        carrinhoDeCompras.adicionarItem("Item 1", 10, 1);
+        carrinhoDeCompras.exibirItens();
     }
 }

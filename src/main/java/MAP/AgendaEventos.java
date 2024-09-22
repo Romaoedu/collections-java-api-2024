@@ -44,9 +44,7 @@ public class AgendaEventos {
                 System.out.println("O proximo evento " + proximoEvento +" Acontecera na data " + proximaData);
                 break;
             }
-
         }
-
     }
 
     public static void main(String[] args) {
